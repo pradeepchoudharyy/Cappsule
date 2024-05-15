@@ -1,0 +1,20 @@
+/* Container for search results */
+.results-container {
+    margin-top: 20px;
+    text-align: left;
+}
+
+/* Product details */
+.product-details {
+    padding: 15px;
+    border: 1px solid #e0e0e0;
+    border-radius: 5px;
+    margin-bottom: 20px;
+}
+
+/* Price display */
+.price-display {
+    font-size: 1.1em;
+    color: #d9534f;
+    margin-top: 10px;
+}
