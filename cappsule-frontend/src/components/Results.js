@@ -34,11 +34,16 @@ const Results = ({ data }) => {
         return Object.keys(data[0].salt_forms_json[selectedForm][selectedStrength] || {});
     };
 
+  
+    
+
     const getLowestPrice = () => {
         if (!selectedForm || !selectedStrength || !selectedPacking) return null;
         const products = data[0].salt_forms_json[selectedForm][selectedStrength][selectedPacking];
         if (!products) return null;
-        const prices = products.map(product => product.selling_price).filter(price => price !== undefined);
+        const prices = [products]
+            ?.map((product) => product.selling_price)
+            .filter((price) => price !== undefined);
         return prices.length ? Math.min(...prices) : null;
     };
 
